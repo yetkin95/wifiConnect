@@ -52,8 +52,7 @@ def connect_to_wifi(ssid, password, interface="wlan0"):
             print("Success!")
             return 0
         else:
-            print("Connection failed. Please check ssid and password")
-            print(f"Ping hatası: {result.stderr.decode()}")
+            print("Connection failed")
             return 1
     except subprocess.CalledProcessError as e:
         print(f"Connectşon Error: {e}")
